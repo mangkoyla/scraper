@@ -46,11 +46,10 @@ extract_lines() {
     grep -E '^.*(vmess|vless|trojan)://' "$file"
 }
 
+base64 -d nodes64 > base64node
 
 extract_lines "nodes" >> extracted_nodes
-extract_lines "nodes64" >> extracted_nodes64
-
-base64 -d extracted_nodes64 > base64node
+extract_lines "base64node" >> extracted_nodes64
 
 echo "Extraction completed!"
 
