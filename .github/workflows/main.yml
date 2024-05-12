@@ -21,11 +21,11 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add All
+        git add All base64node
 
     - name: Commit Changes
       run: |
-        git commit -m "Add All file"
+        git commit -m "Update file"
 
     - name: Push Changes
       uses: ad-m/github-push-action@master
