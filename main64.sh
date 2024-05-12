@@ -1,8 +1,7 @@
 links64=(
     "https://raw.githubusercontent.com/mangkoyla/v2ray/master/v2ray"
     "https://raw.githubusercontent.com/Flik6/getNode/main/v2ray.txt"
-    "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt"
-    "https://hueco.link/v.txt"
+    "https://hueco.link/v.txt
     "https://github.com/Vauth/node/raw/main/Main"
     "https://github.com/Vauth/node/raw/main/Master"
     "https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/vray_sub.txt"
