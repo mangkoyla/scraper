@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm -f All
 links=(
     "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt"
     "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt"
