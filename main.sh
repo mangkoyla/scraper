@@ -56,9 +56,11 @@ echo "Extraction completed!"
 
 cat extracted_nodes base64node > account
 
+sort -u account > All
+
 chmod +x ./bin/lite-linux
 
-./bin/lite-linux -config ./bin/config.json -test account
+./bin/lite-linux -config ./bin/config.json -test All
 
 links=$(jq -r '.nodes | map(select(.avg_speed > 0)) | .[].link' output.json)
 
