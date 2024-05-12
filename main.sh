@@ -58,7 +58,7 @@ cat extracted_nodes base64node > account
 
 chmod +x ./bin/lite-linux
 
-./lite-linux -config ./bin/config.json -test account
+./bin/lite-linux -config ./bin/config.json -test account
 
 links=$(jq -r '.nodes | map(select(.avg_speed > 0)) | .[].link' output.json)
 
