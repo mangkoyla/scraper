@@ -21,11 +21,11 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add url_test
+        git add All
 
     - name: Commit Changes
       run: |
-        git commit -m "Add url_test file"
+        git commit -m "Add All file"
 
     - name: Push Changes
       uses: ad-m/github-push-action@master
