@@ -43,7 +43,7 @@ echo "All downloads completed!"
 
 extract_lines() {
     local file="$1"
-    grep -E '^.*(vmess|vless|trojan|ss)://' "$file"
+    grep -E '^.*(vmess|vless|trojan)://' "$file"
 }
 
 
