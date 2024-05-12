@@ -14,3 +14,4 @@ for link64 in "${links64[@]}"; do
     curl -s "$link64" >> nodes64
     echo "Downloaded $link64"
 done
+sed -i 's/^vmess:\/\/\|vless:\/\/\|trojan:\/\/\|ss:\/\///g' nodes64
