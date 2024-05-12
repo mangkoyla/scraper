@@ -1,4 +1,4 @@
-name: Push URL Test File
+name: Fetch Url & Test Url
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: '0 5,13,21 * * *'
 
 jobs:
-  build:
+  scraping:
     runs-on: ubuntu-latest
 
     steps:
