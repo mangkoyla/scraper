@@ -1,8 +1,5 @@
 #!/bin/bash
 
-rm -f All
-
-
 links=(
     "https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt"
     "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt"
@@ -44,6 +41,8 @@ extract_lines "base64node" >> extracted_nodes64
 echo "Extraction completed!"
 
 cat extracted_nodes extracted_nodes64 > account
+
+sort -u account > All
 
 # chmod +x ./bin/lite-linux
 
