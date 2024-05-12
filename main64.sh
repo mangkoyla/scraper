@@ -1,6 +1,5 @@
 links64=(
     "https://raw.githubusercontent.com/mangkoyla/v2ray/master/v2ray"
-    "https://raw.githubusercontent.com/Flik6/getNode/main/v2ray.txt"
     "https://hueco.link/v.txt"
     "https://github.com/Vauth/node/raw/main/Main"
     "https://github.com/Vauth/node/raw/main/Master"
