@@ -58,12 +58,12 @@ cat extracted_nodes base64node > account
 
 sort -u account > All
 
-chmod +x ./bin/lite-linux
+# chmod +x ./bin/lite-linux
 
-./bin/lite-linux -config ./bin/config.json -test All
+# ./bin/lite-linux -config ./bin/config.json -test All
 
-links=$(jq -r '.nodes | map(select(.avg_speed > 0)) | .[].link' output.json)
+# links=$(jq -r '.nodes | map(select(.avg_speed > 0)) | .[].link' output.json)
 
-echo "$links" > url_test
+# echo "$links" > url_test
 
-echo "Links with avg_speed > 0 have been saved to url_test file."
+# echo "Links with avg_speed > 0 have been saved to url_test file."
