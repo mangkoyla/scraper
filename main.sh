@@ -15,54 +15,32 @@ links=(
     "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/all.txt"
 )
 
-links64=(
-    "https://raw.githubusercontent.com/mangkoyla/v2ray/master/v2ray"
-    "https://raw.githubusercontent.com/Flik6/getNode/main/v2ray.txt"
-    "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list_raw.txt"
-    "https://hueco.link/v.txt"
-    "https://github.com/Vauth/node/raw/main/Main"
-    "https://github.com/Vauth/node/raw/main/Master"
-    "https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/vray_sub.txt"
-    "https://raw.githubusercontent.com/0x24a/FreeNodes/main/subs/main.txt"
-    "https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed"
-    "https://raw.githubusercontent.com/mheidari98/.proxy/main/all"
-    "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/splitted/mixed"
-)
-
 for link in "${links[@]}"; do
     curl -s "$link" >> nodes
     echo "Downloaded $link"
 done
 
-for link64 in "${links64[@]}"; do
-    curl -s "$link64" >> nodes64
-    echo "Downloaded $link64"
-done
+chmod +x ./main64.sh
+
+bash ./main64.sh
+
+base64 -d nodes64 > base64node
 
 echo "All downloads completed!"
 
 extract_lines() {
     local file="$1"
-    grep -E '^.*(vmess|vless|trojan)://' "$file"
+    grep -E '^.*(vmess|vless|trojan|ss)://' "$file"
 }
 
-base64 -d nodes64 > base64node
 
 extract_lines "nodes" >> extracted_nodes
 extract_lines "base64node" >> extracted_nodes64
 
 echo "Extraction completed!"
 
-cat extracted_nodes base64node > account
-
-sort -u account > All
+cat extracted_nodes extracted_nodes64 > account
 
 # chmod +x ./bin/lite-linux
 
-# ./bin/lite-linux -config ./bin/config.json -test All
-
-# links=$(jq -r '.nodes | map(select(.avg_speed > 0)) | .[].link' output.json)
-
-# echo "$links" > url_test
-
-# echo "Links with avg_speed > 0 have been saved to url_test file."
+# ./lite-linux -config ./bin/config.json -test account
