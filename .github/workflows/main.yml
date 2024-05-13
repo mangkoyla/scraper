@@ -15,6 +15,7 @@ jobs:
 
     - name: Run Script
       run: |
+        rm All
         bash main.sh
 
     - name: Add Changes
