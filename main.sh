@@ -10,6 +10,7 @@ links=(
     "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge.txt"
     "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list_raw.txt"
     "https://raw.githubusercontent.com/HakurouKen/free-node/main/public"
+    "https://raw.githubusercontent.com/Everyday-VPN/Everyday-VPN/main/subscription/main.txt"
     "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/row-url/actives.txt"
     "https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/All_Configs_Sub.txt"
     "https://raw.githubusercontent.com/asakura42/vss/master/output.txt"
