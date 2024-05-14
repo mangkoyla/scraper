@@ -50,3 +50,5 @@ sort -u account >> All
 chmod +x ./bin/lite-linux
 
 ./bin/lite-linux -config ./bin/config.json -test nodesvidio
+
+jq -r '.nodes[] | select(.ping | tonumber > 0) | .link' output.json > url_test.txt
