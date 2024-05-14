@@ -43,7 +43,7 @@ echo "Extraction completed!"
 
 cat extracted_nodes extracted_nodes64 > account
 
-sort -u account > All
+sort -u account >> All
 
 # chmod +x ./bin/lite-linux
 
