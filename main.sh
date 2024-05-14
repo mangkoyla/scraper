@@ -23,10 +23,8 @@ for link in "${links[@]}"; do
 done
 
 chmod +x ./main64.sh
-chmod +x ./vidio.sh
 
 bash ./main64.sh
-bash ./vidio.sh
 
 base64 -d nodes64 > base64node
 
@@ -47,8 +45,8 @@ cat extracted_nodes extracted_nodes64 > account
 
 sort -u account >> All
 
-chmod +x ./bin/lite-linux
+# chmod +x ./bin/lite-linux
 
-./bin/lite-linux -config ./bin/config.json -test nodesvidio
+# ./bin/lite-linux -config ./bin/config.json -test nodesvidio
 
-jq -r '.nodes[] | select(.ping | tonumber > 0) | .link' output.json > url_test.txt
+# jq -r '.nodes[] | select(.ping | tonumber > 0) | .link' output.json > url_test.txt
