@@ -22,7 +22,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add All output.json
+        git add All url_test.txt
 
     - name: Commit Changes
       run: |
