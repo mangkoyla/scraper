@@ -22,11 +22,11 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add All url_test.txt
+        git add All
 
     - name: Commit Changes
       run: |
-        git commit -m "Update file"
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S') Update Accounts"
 
     - name: Push Changes
       uses: ad-m/github-push-action@master
