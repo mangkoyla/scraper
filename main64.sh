@@ -1,4 +1,5 @@
 links64=(
+    "https://raw.githubusercontent.com/Leon406/SubCrawler/main/sub/share/vless"
     "https://raw.githubusercontent.com/mangkoyla/v2ray/master/v2ray"
     "https://hueco.link/v.txt"
     "https://raw.githubusercontent.com/ts-sf/fly/main/v2"
