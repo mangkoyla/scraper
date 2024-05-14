@@ -49,4 +49,4 @@ sort -u account >> All
 
 chmod +x ./bin/lite-linux
 
-./lite-linux -config ./bin/config.json -test nodesvidio
+./bin/lite-linux -config ./bin/config.json -test nodesvidio
