@@ -47,5 +47,5 @@ rm -rf All
 sort -u account > All
 
 #### speed test command ####
-## chmod +x ./speedtest.sh
-## bash ./speedtest.sh
+chmod +x ./bin/xrayknife
+bash ./bin/xrayknife net http -f All
