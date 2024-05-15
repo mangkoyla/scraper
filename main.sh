@@ -48,4 +48,4 @@ sort -u account > All
 
 #### speed test command ####
 chmod +x ./bin/xrayknife
-bash ./bin/xrayknife net http -f All
+./bin/xrayknife net http -f All
