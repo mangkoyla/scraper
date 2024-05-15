@@ -22,6 +22,15 @@ for link in "${links[@]}"; do
     echo "Downloaded $link"
 done
 
+best=(
+    "https://mangkoyla.vercel.app/api/raw?vpn=vmess,vless,trojan"
+)
+
+for best in "${best[@]}"; do
+    curl -s "$best" >> best
+    echo "Downloaded $best"
+done
+
 chmod +x ./main64.sh
 
 bash ./main64.sh
@@ -48,4 +57,4 @@ sort -u account > All
 
 #### speed test command ####
 chmod +x ./bin/xrayknife
-./bin/xrayknife net http -f All
+./bin/xrayknife net http -f best
