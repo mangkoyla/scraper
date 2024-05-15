@@ -46,6 +46,6 @@ cat extracted_nodes extracted_nodes64 > account
 rm -rf All
 sort -u account > All
 
-chmod +x ./speedtest.sh
-
-bash ./speedtest.sh
+#### speed test command ####
+## chmod +x ./speedtest.sh
+## bash ./speedtest.sh
