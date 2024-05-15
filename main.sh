@@ -57,4 +57,6 @@ sort -u account > All
 
 #### speed test command ####
 chmod +x ./bin/xrayknife
+rm -rf valid.txt
 ./bin/xrayknife net http -f best
+sort -u valid.txt > Best-ping
