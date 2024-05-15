@@ -3,7 +3,7 @@ name: Fetch Url & Test Url
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 */2 * * *'
 
 jobs:
   scraping:
@@ -15,14 +15,13 @@ jobs:
 
     - name: Run Script
       run: |
-        rm -rf All
         bash main.sh
 
     - name: Add Changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add All valid.txt
+        git add All Best-ping
 
     - name: Commit Changes
       run: |
