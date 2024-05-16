@@ -53,7 +53,8 @@ echo "Extraction completed!"
 cat extracted_nodes extracted_nodes64 > account
 
 rm -rf All
-sort -u account > All
+sort -u account > oke
+sort -u oke > All
 
 #### speed test command ####
 chmod +x ./bin/xrayknife
