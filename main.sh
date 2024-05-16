@@ -54,10 +54,20 @@ cat extracted_nodes extracted_nodes64 > account
 
 rm -rf All
 sort -u account > oke
+output_file="oke"
+file="account"
+vmess=$(grep -E -o 'vmess://[^[:space:]]+' "$file")
+vless=$(grep -E -o 'vless://[^[:space:]]+' "$file")
+trojan=$(grep -E -o 'trojan://[^[:space:]]+' "$file")
+
+echo "$vmess" > "$output_file"
+echo "$vless" >> "$output_file"
+echo "$trojan" >> "$output_file"
+
 sort -u oke > All
 
 #### speed test command ####
-chmod +x ./bin/xrayknife
-rm -rf valid.txt
-./bin/xrayknife net http -f best
-sort -u valid.txt > Best-ping
+#chmod +x ./bin/xrayknife
+#rm -rf valid.txt
+#./bin/xrayknife net http -f best
+#sort -u valid.txt > Best-ping
